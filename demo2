@@ -1,0 +1,27 @@
+this is a new file used by creating the vi_filename command directly.
+nproc cmd is used to check out number of cpu s used, 
+free -g cmd is used to check the space  avaialble 
+df -h cmd is used to load the details about file sstem, size of file,
+available free space, space used in that directory.
+top command is used to monitor total system usage how the performace, how much memory used.
+mkdir cmd is used to create directory.
+touch is used to create file.
+ls cmd is used to list the files.
+pwd cmd is used to find present working directory.
+man cmd is used to check all the deatils about any cmmds used, eg: man ls
+chmod cmd is used to give permissions to a file.
+./"filename" cmd is used to execute the file(write your original file name in "filename" place.
+set -x this cmd is used to print the cmnds before executing those commands from script( of we write couple of cmds to excecute in a script then those will execute but before executing the commands also get printed to understand more effectively).
+ps -ef cmd provides the all process running in the system
+grok cmd  pipe is used to get the specific process running/if we need any specific type we will use grok here
+eg: ps -ef | grok "amazon"-  this command provides all the specific process which having the word amazon, mainly grok cmd is used combination along with other cmds
+awk cmd is used to sort out and bring the exact data which we want,
+eg: if we need to get the ids of the above amaxon process alone instead of total, then we use grok like below
+ ps -ef | grok "amazon | awk -F '{print $2}', here $2 represetnts the postition of the ids present when we check
+set -e is a command which helps to stop the execution when ever there is an error, otherwise, linux will execute code for other lines leaving that line alone, 
+for eg: if we are executing 4 commands, and second line has error, linux will keep going and give output if there is no set -e cmd,
+set -o pipefail this cmd is used to stop execuiton when ever there are pipes in the script, set -e just used for non pipe statements, set -o pipefail is used to find the error and stop execution, writing this helps us more to debug and identify errors
+
+curl cmd id used to find out the resources/ data from any URL, basically if we want to get any information from internet we use curl "URL" then it provides that information to us, here instead of "URL" we need to provide the exact url of what we are trying to get, mostly devops users use to check the log files and find out the error in that log file by using curl
+wget cmd is also same like curl but wget is used to save the file into our local and get it, but curl directly opens the file in our cli.
+
